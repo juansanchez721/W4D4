@@ -29,7 +29,7 @@ end
 
 
 def my_transpose
-    return_matrix = Array.new(3) {Array.new}
+    return_matrix = Array.new(self.length) {Array.new}
 
     (0...self.length).each do |c|
         self.each do |row|
