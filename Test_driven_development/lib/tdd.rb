@@ -38,4 +38,21 @@ def my_transpose
     end
     return_matrix
 end
+
+def stock_picker
+    buy_sell = []
+    max_profit = 0 
+    self.each_with_index do |ele, i|
+        self.each_with_index do |el, j|
+            if j > i && (el - ele) > max_profit
+                max_profit = el - ele
+                buy_sell = [i,j]
+            end
+        end
+
+    end
+    buy_sell
+end
+
+
 end

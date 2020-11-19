@@ -48,4 +48,19 @@ RSpec.describe Array do
 
     end
 
+    describe "#stock_picker" do
+        
+        it "should not modify the original array." do
+            all_stocks = [70, 90, 45, 35, 55, 70]
+            all_stocks.stock_picker
+            expect(all_stocks).to eq([70, 90, 45, 35, 55, 70])
+        end
+
+        it "should return the indices of the two days with the highest profit (the day you buy and the day you sell)." do
+            all_stocks = [70, 90, 45, 35, 55, 70]
+            expect(all_stocks.stock_picker).to eq([3,5])
+        end
+
+    end
+
 end
