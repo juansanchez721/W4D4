@@ -24,8 +24,18 @@ def two_sum
             end
         end
     end
-    []
     results
 end
 
+
+def my_transpose
+    return_matrix = Array.new(3) {Array.new}
+
+    (0...self.length).each do |c|
+        self.each do |row|
+            return_matrix[c] << row[c] 
+        end
+    end
+    return_matrix
+end
 end

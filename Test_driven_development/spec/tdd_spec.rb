@@ -30,7 +30,22 @@ RSpec.describe Array do
             test_arr = [0, -1, 3, 0, 1, 5, -6, 6]
             expect(test_arr.two_sum).to eq([[0,3], [1,4], [6,7]])
         end
-        
+
+    end
+
+    describe "#my_transpose" do
+
+        it "should not modify the original array" do
+            test_matrix = [[0, 1, 2],[3, 4, 5],[6, 7, 8]]
+            test_matrix.my_transpose
+            expect(test_matrix).to eq([[0, 1, 2],[3, 4, 5],[6, 7, 8]])
+       end
+
+       it "should convert between the row-oriented and column-oriented representations (elements)" do
+        test_matrix = [[0, 1, 2],[3, 4, 5],[6, 7, 8]]
+        expect(test_matrix.my_transpose).to eq([[0, 3, 6],[1, 4, 7],[2, 5, 8]])
+       end
+
     end
 
 end
